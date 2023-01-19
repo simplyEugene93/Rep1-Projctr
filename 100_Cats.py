@@ -18,11 +18,6 @@ Here you should write an algorithm, after that, try to make pseudo code.
 Only after that start to work. Code is simple here, but you might struggle with algorithm.
 Therefore don`t try to write a code from the first attempt.
 
-*Homework should be uploaded at GitHub.com*
-*Result of this HW should be a link to your GitHub code*
-*To learn how to work in Git, read first three chapters of this book:*
-[GIT book](https://git-scm.com/book/en/v2)"""
-
 list_of_100_cats = [i for i in range(1,101)]
 second_round = [i for i in range(1, 101) if i % 2 == 0]
 third_round = [i for i in range(1, 101) if i % 3 == 0]
