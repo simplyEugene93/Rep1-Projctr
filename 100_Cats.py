@@ -1,6 +1,6 @@
 ### Practice
 
-"""**You have 100 cats.**
+"""You have 100 cats.
 
 One day you decide to arrange all your cats in a giant circle. Initially,
 none of your cats have any hats on. You walk around the circle 100 times,
@@ -16,11 +16,9 @@ Optional: Make function that can calculate hat with any amount of rounds and cat
 
 Here you should write an algorithm, after that, try to make pseudo code.
 Only after that start to work. Code is simple here, but you might struggle with algorithm.
-Therefore don`t try to write a code from the first attempt.
+Therefore don`t try to write a code from the first attempt."""
 
-list_of_100_cats = [i for i in range(1,101)]
-second_round = [i for i in range(1, 101) if i % 2 == 0]
-third_round = [i for i in range(1, 101) if i % 3 == 0]
-minus_2st_round = [x for x in list_of_100_cats if x not in second_round]
-minus_3st_round = [x for x in minus_2st_round if x not in third_round]
-print(f"The cats that still have hats are {minus_3st_round}")
+number_of_cats = 100
+cats_with_hats = []
+number_of_laps = 100
+print([i for i in range(1, number_of_cats+1) if sum(1 for n in range(1, number_of_laps+1) if not i%n)%2])
