@@ -1,6 +1,6 @@
 ### Practice
 
-"""**You have 100 cats.**
+"""You have 100 cats.
 
 One day you decide to arrange all your cats in a giant circle. Initially,
 none of your cats have any hats on. You walk around the circle 100 times,
@@ -16,7 +16,7 @@ Optional: Make function that can calculate hat with any amount of rounds and cat
 
 Here you should write an algorithm, after that, try to make pseudo code.
 Only after that start to work. Code is simple here, but you might struggle with algorithm.
-Therefore don`t try to write a code from the first attempt.
+Therefore don`t try to write a code from the first attempt."""
 
 number_of_cats = 100
 cats_with_hats = []
