@@ -77,26 +77,33 @@ and turn the robot in that direction.
 The display_position method should print the current position of the robot."""
 
 class Robot:
-    def __init__(self, orientation, position_x, position_y) -> None:
+    def __init__(self, orientation=90, position_x=0, position_y=0) -> None:
         self.orientation = orientation
         self.position_x = position_x
         self.position_y = position_y
 
-    def move(self, right, left):
-        move_x = self.position_x + right
-        move_y = self.position_y + left
-        return move_x, move_y
+    def move(self, num_of_steps):
+        self.position_y += num_of_steps
+        self.position_x += num_of_steps
 
-    def turn(self, degree):
-        turn = self.orientation + degree
-        if turn > 360:
-            return "turn can't be more than 360"
-        return turn
+    def turn(self, direction):
+        if direction == "right":
+            self.orientation += 90
+        if direction == "left":
+            self.orientation -= 90
 
-    def display(self, move, turn):
-        return f"Antony is directed on {turn} degrees, his x and y position is {move}"
+    def display(self):
+        return f"The Robot is directed on {self.orientation} degree. He made {self.position_y}" \
+               f" steps on Y and {self.position_x} on X"
 
 
-antony = Robot(90, 10, 20)
-print(antony.display(antony.move(10, 20), antony.turn(80)))
+antony = Robot(90, 10, 10)
+antony.turn("right")
+antony.turn("right")
+antony.move(20)
+print(antony.display())
+antony.turn("left")
+antony.move(30)
+print(antony.display())
+
 
