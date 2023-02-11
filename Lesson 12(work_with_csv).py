@@ -1,6 +1,6 @@
 import random
 import csv
-from  collections import Counter
+
 # Create file with some content.
 # Create second file and copy content of the first file to the second file in upper case.
 
