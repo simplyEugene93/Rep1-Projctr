@@ -44,13 +44,12 @@ class FastFood(Restaurant):
     def order(self, name, quantity):
         if name not in self.menu:
             raise Exception("Dish is not available")
-
+        elif quantity > self.menu[name]["quantity"]:
+            raise Exception("Quantity is not avaible")
         elif quantity < self.menu[name]["quantity"]:
             total = self.menu[name]["price"] * quantity
             self.menu[name]["quantity"] -= quantity
             return total
-        elif quantity > self.menu[name]["quantity"]:
-            raise Exception("Quantity is not avaible")
 menu = {
     'burger': {'price': 5, 'quantity': 10},
     'pizza': {'price': 10, 'quantity': 20},
