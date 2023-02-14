@@ -1,7 +1,7 @@
 # 1. Write a decorator that ensures a function is only called by users with a specific role.
 # Each function should have an user_type with a string type in kwargs
 
-def is_admin(func):
+"""def is_admin(func):
     def wrapper(*args, **kwargs):
         if kwargs["user_type"] != "admin":
             raise Exception("Permission denied")
@@ -16,7 +16,7 @@ def receive_check(user_type: str):
     print(check)
 
 receive_check(user_type='admin')
-receive_check(user_type='user')
+receive_check(user_type='user')"""
 
 # 2. Write a decorator that wraps a function in a try-except block
 # and print an error if error has happened
@@ -25,8 +25,8 @@ def find_errors(func):
     def wrapper(*args, **kwargs):
         try:
             func(*args, **kwargs)
-        except KeyError:
-            print(f"Found 1 error during execution of your function: There is no such 'key' as foo")
+        except Exception as Error:
+            print(f"Found 1 error during execution of your function: The Error is {Error}")
     return wrapper
 @find_errors
 def some_function_with_risky_operation(data):
